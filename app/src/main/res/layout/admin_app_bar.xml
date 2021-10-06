@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:gravity="center_vertical"
+    app:layout_collapseMode="pin"
+    app:layout_scrollFlags="scroll|enterAlways"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/menu_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_menu_menu" />
+</androidx.appcompat.widget.Toolbar>

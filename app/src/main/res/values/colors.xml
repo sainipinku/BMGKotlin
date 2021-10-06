@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#088F81</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="colorSecondary">#03DAC5</color>
+
+    <!-- Pin -->
+    <color name="pin_bg">#14088F81</color>
+    <color name="pin_unselected_border">#66088F81</color>
+
+    <color name="ripple_color">#12663b</color>
+</resources>

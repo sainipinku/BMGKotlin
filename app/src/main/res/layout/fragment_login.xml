@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_layout"
+            android:layout_width="@dimen/none"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_login_logo" />
+
+            <Space
+                android:layout_width="@dimen/none"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/none"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_top_round_corner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_layout">
+
+            <TextView
+                android:id="@+id/hi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Hi!"
+                android:textColor="#001B3B"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lets_get_started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Let's Get Started"
+                android:textColor="#7F90A8"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hi" />
+
+            <TextView
+                android:id="@+id/phone_number_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Enter Phone Number"
+                android:textColor="#033934"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lets_get_started" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_mobile_number"
+                android:layout_width="@dimen/none"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_ground_ground_detail_item_common"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phone_number_title">
+
+                <TextView
+                    android:id="@+id/country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:text="+91"
+                    android:textColor="#2C3C53"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_ground" />
+
+                <View
+                    android:id="@+id/divider_mobile_number"
+                    android:layout_width="0.5dp"
+                    android:layout_height="@dimen/none"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="13dp"
+                    android:background="#C4C4C4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/country_code"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edittext_mobile_number"
+                    android:layout_width="@dimen/none"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@null"
+                    android:hint="Mobile number"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textColor="#7FA89C"
+                    android:textColorHint="#7FA89C"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/divider_mobile_number"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/get_otp"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Get OTP"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mobile_number" />
+
+            <TextView
+                android:id="@+id/have_a_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fitsSystemWindows="true"
+                android:padding="10dp"
+                android:text="Have a Pin?"
+                android:textColor="#7FA89C"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/get_otp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

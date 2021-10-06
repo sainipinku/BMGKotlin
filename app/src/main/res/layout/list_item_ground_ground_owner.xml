@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="20dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ground_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ground" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="@dimen/none"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#033934"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/update_details"
+            app:layout_constraintStart_toEndOf="@id/ground_icon"
+            app:layout_constraintTop_toTopOf="@id/ground_icon"
+            tools:text="Ground name" />
+
+        <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:srcCompat="@drawable/ic_ground_location" />
+
+        <TextView
+            android:id="@+id/ground_address"
+            android:layout_width="@dimen/none"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#7FA89C"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/location_icon"
+            app:layout_constraintEnd_toStartOf="@id/update_details"
+            app:layout_constraintStart_toEndOf="@id/location_icon"
+            app:layout_constraintTop_toTopOf="@id/location_icon"
+            tools:text="Ground location sdsds sdsds sdsd" />
+
+        <Button
+            android:id="@+id/update_details"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:letterSpacing="0.0"
+            android:text="Update Details"
+            android:textAllCaps="false"
+            android:textColor="#033934"
+            android:textSize="11sp"
+            app:backgroundTint="#ECF6F5"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/add_slots"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="22dp"
+            android:letterSpacing="0.0"
+            android:text="Add Slots"
+            android:textAllCaps="false"
+            android:textColor="#033934"
+            android:textSize="11sp"
+            app:backgroundTint="#ECF6F5"
+            app:cornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="@id/update_details"
+            app:layout_constraintTop_toBottomOf="@id/update_details"
+            app:rippleColor="@color/colorPrimary" />
+
+        <Space
+            android:layout_width="@dimen/none"
+            android:layout_height="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_slots" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

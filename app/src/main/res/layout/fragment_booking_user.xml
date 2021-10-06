@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginEnd="20dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ground" />
+
+        <TextView
+            android:id="@+id/ground_name"
+            android:layout_width="@dimen/none"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#033934"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/icon"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="@id/icon"
+            tools:text="Ground name" />
+
+
+        <TextView
+            android:id="@+id/overs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_slot_over_time"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:textColor="#033934"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/ground_name"
+            app:layout_constraintTop_toBottomOf="@id/ground_name"
+            tools:text="20 overs" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_slot_over_time"
+            android:drawableStart="@drawable/ic_slot_time"
+            android:drawablePadding="4dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:textColor="#033934"
+            android:textSize="11sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/overs"
+            app:layout_constraintStart_toEndOf="@id/overs"
+            tools:text="2:00 PM" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/none"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:background="#BDE3DF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/overs" />
+       <LinearLayout
+           android:id="@+id/linears"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/divider"
+           android:weightSum="1"
+           android:paddingLeft="10dp"
+           android:paddingBottom="15dp"
+           android:orientation="horizontal">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_weight=".50"
+               android:gravity="center|start"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/team_1_title"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Contact Ground Owner"
+                   android:textColor="#7FA89C"
+                   android:textSize="12sp"
+                   tools:ignore="MissingConstraints" />
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="5dp"
+                       android:background="@drawable/paid_round_shape_second">
+                       <ImageView
+                           android:id="@+id/team_1_whatsapp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           app:srcCompat="@drawable/ic_whatsapp" />
+                       <TextView
+                           android:id="@+id/whataspp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:ellipsize="end"
+                           android:textColor="#033934"
+                           android:textSize="14sp"
+                           android:textStyle="bold"
+                           tools:text="Whatsapp" />
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="5dp"
+                       android:background="@drawable/paid_round_shape_second">
+                       <ImageView
+                           android:id="@+id/team_1_call"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           app:srcCompat="@drawable/ic_call" />
+                       <TextView
+                           android:id="@+id/phone"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:ellipsize="end"
+                           android:textColor="#033934"
+                           android:textSize="14sp"
+                           android:textStyle="bold"
+                           tools:text="Phone" />
+                   </LinearLayout>
+               </LinearLayout>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:layout_weight=".50"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/team_2_title"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Payment status"
+                   android:textColor="#7FA89C"
+                   android:textSize="12sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   tools:ignore="MissingConstraints" />
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:layout_height="wrap_content">
+                   <LinearLayout
+                       android:layout_width="80dp"
+                       android:layout_height="35dp"
+                       android:gravity="center"
+                       android:background="@drawable/paid_round_shape">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Fully Paid"
+                           android:textColor="#FFFFFF"
+                           android:textSize="12sp"
+                           app:layout_constraintStart_toStartOf="parent"
+                           tools:ignore="MissingConstraints" />
+                   </LinearLayout>
+               </LinearLayout>
+           </LinearLayout>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@id/linears"
+           tools:ignore="MissingConstraints">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:paddingLeft="20dp"
+               android:paddingRight="20dp"
+               android:paddingTop="10dp"
+               android:layout_marginRight="25dp"
+               android:paddingBottom="10dp"
+               android:background="@drawable/paid_round_shape">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Fully Paid"
+                   android:textColor="#FFFFFF"
+                   android:textSize="12sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   tools:ignore="MissingConstraints" />
+           </LinearLayout>
+           <TextView
+               android:id="@+id/canselslot"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/bg_slot_over_time"
+               android:paddingLeft="20dp"
+               android:paddingRight="20dp"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"
+               android:textColor="#033934"
+               android:textSize="11sp"
+               tools:text="Cansel Slot" />
+       </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

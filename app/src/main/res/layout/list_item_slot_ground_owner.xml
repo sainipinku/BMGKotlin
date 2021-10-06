@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginEnd="20dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ground" />
+
+        <TextView
+            android:id="@+id/ground_name"
+            android:layout_width="@dimen/none"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#033934"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/icon"
+            app:layout_constraintEnd_toStartOf="@id/menu"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="@id/icon"
+            tools:text="Ground name" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ground_name"
+            app:srcCompat="@drawable/ic_menu" />
+
+        <TextView
+            android:id="@+id/overs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_slot_over_time"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:textColor="#033934"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/ground_name"
+            app:layout_constraintTop_toBottomOf="@id/ground_name"
+            tools:text="20 overs" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_slot_over_time"
+            android:drawableStart="@drawable/ic_slot_time"
+            android:drawablePadding="4dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:textColor="#033934"
+            android:textSize="11sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/overs"
+            app:layout_constraintStart_toEndOf="@id/overs"
+            tools:text="2:00 PM" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/none"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:background="#BDE3DF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/overs" />
+
+        <TextView
+            android:id="@+id/team_1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Team 1:"
+            android:textColor="#7FA89C"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <TextView
+            android:id="@+id/team_1_name"
+            android:layout_width="@dimen/none"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="#001B3B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/team_1_title"
+            app:layout_constraintEnd_toStartOf="@id/team_1_whatsapp"
+            app:layout_constraintStart_toEndOf="@id/team_1_title"
+            app:layout_constraintTop_toTopOf="@id/team_1_title"
+            tools:text="Mumbai Indians" />
+
+        <TextView
+            android:id="@+id/team_1_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:drawableStart="@drawable/ic_add_team"
+            android:drawablePadding="6dp"
+            android:text="Add Team"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/team_1_title"
+            app:layout_constraintStart_toEndOf="@id/team_1_title"
+            app:layout_constraintTop_toTopOf="@id/team_1_title"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/team_1_whatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/team_1_title"
+            app:layout_constraintEnd_toStartOf="@id/team_1_call"
+            app:layout_constraintTop_toTopOf="@id/team_1_title"
+            app:srcCompat="@drawable/ic_whatsapp" />
+
+        <ImageView
+            android:id="@+id/team_1_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/team_1_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/team_1_title"
+            app:srcCompat="@drawable/ic_call" />
+
+        <TextView
+            android:id="@+id/team_2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:text="Team 2:"
+            android:textColor="#7FA89C"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/team_1_title" />
+
+        <TextView
+            android:id="@+id/team_2_name"
+            android:layout_width="@dimen/none"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="#001B3B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/team_2_title"
+            app:layout_constraintEnd_toStartOf="@id/team_2_whatsapp"
+            app:layout_constraintStart_toEndOf="@id/team_2_title"
+            app:layout_constraintTop_toTopOf="@id/team_2_title"
+            tools:text="Deccan Chargers" />
+
+        <TextView
+            android:id="@+id/team_2_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:drawableStart="@drawable/ic_add_team"
+            android:drawableLeft="@drawable/ic_add_team"
+            android:drawablePadding="6dp"
+            android:text="Add Team"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/team_2_title"
+            app:layout_constraintStart_toEndOf="@id/team_2_title"
+            app:layout_constraintTop_toTopOf="@id/team_2_title"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/team_2_whatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/team_2_title"
+            app:layout_constraintEnd_toStartOf="@id/team_2_call"
+            app:layout_constraintTop_toTopOf="@id/team_2_title"
+            app:srcCompat="@drawable/ic_whatsapp" />
+
+        <ImageView
+            android:id="@+id/team_2_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/team_2_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/team_2_title"
+            app:srcCompat="@drawable/ic_call" />
+
+        <Space
+            android:layout_width="@dimen/none"
+            android:layout_height="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/team_2_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="overs">
+        <item>20 overs</item>
+        <item>30 overs</item>
+        <item>50 overs</item>
+    </string-array>
+
+    <string-array name="ball_type">
+        <item>Red Leather</item>
+        <item>White Leather</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string-array name="pitch_type">
+        <item>Mat</item>
+        <item>Astro Turf</item>
+        <item>Turf</item>
+    </string-array>
+</resources>

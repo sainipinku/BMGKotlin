@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.user.UserProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="@dimen/none"
+        android:layout_height="@dimen/none"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/top"
+                android:layout_width="@dimen/none"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_bottom_round_12dp_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_picture_name"
+                android:layout_width="@dimen/none"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="33dp"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp">
+
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_photo_bg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#033934"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/photo"
+                        tools:text="Basavaraj Sarwad" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_pin"
+                android:layout_width="@dimen/none"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_picture_name">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icon_pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_pin" />
+
+                    <TextView
+                        android:id="@+id/pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="PIN"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/icon_pin"
+                        app:layout_constraintStart_toEndOf="@id/icon_pin"
+                        app:layout_constraintTop_toTopOf="@id/icon_pin" />
+
+                    <Button
+                        android:id="@+id/button_set_pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Set up"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        app:cornerRadius="4dp"
+                        app:layout_constraintBottom_toBottomOf="@id/icon_pin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/icon_pin" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/title_calling_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:text="Calling phone Number"
+                android:textColor="#033934"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_pin" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_phone_number"
+                android:layout_width="@dimen/none"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_calling_phone_number">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icon_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_phone" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edittext_phone_number"
+                        android:layout_width="@dimen/none"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@null"
+                        android:hint="Calling phone number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/icon_phone"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/title_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:text="Team name"
+                android:textColor="#033934"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_phone_number" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/team_name"
+                android:layout_width="@dimen/none"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_team_name">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_phone" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edittext_team_name"
+                        android:layout_width="@dimen/none"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@null"
+                        android:hint="Chennai super king"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/team"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/title_bank_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:text="Bank Details"
+                android:textColor="#033934"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/team_name" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_bank_details"
+                android:layout_width="@dimen/none"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_bank_details">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/title_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bank name"
+                        android:textColor="#033934"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_bank_name"
+                        android:layout_width="@dimen/none"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_ground_ground_detail_item_common"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_bank_name">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edittext_bank_name"
+                            android:layout_width="@dimen/none"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:background="@null"
+                            android:hint="Bank name"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/title_account_holder_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Account Holder name"
+                        android:textColor="#033934"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layout_bank_name" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_account_holder_name"
+                        android:layout_width="@dimen/none"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_ground_ground_detail_item_common"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_account_holder_name">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edittext_account_holder_name"
+                            android:layout_width="@dimen/none"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:background="@null"
+                            android:hint="Account Holder name"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/title_account_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Account Number"
+                        android:textColor="#033934"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layout_account_holder_name" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_account_number"
+                        android:layout_width="@dimen/none"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_ground_ground_detail_item_common"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_account_number">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edittext_account_number"
+                            android:layout_width="@dimen/none"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:background="@null"
+                            android:hint="Account Number"
+                            android:inputType="number"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/title_ifsc_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="IFSC code"
+                        android:textColor="#033934"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layout_account_number" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_ifsc_code"
+                        android:layout_width="@dimen/none"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_ground_ground_detail_item_common"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_ifsc_code">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edittext_ifsc_code"
+                            android:layout_width="@dimen/none"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:background="@null"
+                            android:hint="IFSC code"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

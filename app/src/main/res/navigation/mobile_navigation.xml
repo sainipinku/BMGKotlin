@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_splash">
+
+    <fragment
+        android:id="@+id/nav_splash"
+        android:name="com.bookmygame.ui.FragmentSplash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/navigate_to_login_screen"
+            app:destination="@id/nav_login"
+            app:popUpTo="@id/nav_splash"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/navigate_to_admin_home_screen"
+            app:destination="@id/nav_home_admin"
+            app:popUpTo="@id/nav_splash"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/navigate_to_ground_owner_home_screen"
+            app:destination="@id/nav_home_ground_owner"
+            app:popUpTo="@id/nav_splash"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/navigate_to_user_home_screen"
+            app:destination="@id/nav_home_user"
+            app:popUpTo="@id/nav_splash"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.bookmygame.ui.login.LoginFragment"
+        android:label=""
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/navigate_to_otp_screen"
+            app:destination="@id/nav_otp"
+            app:popUpTo="@id/nav_splash"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/navigate_to_pin_screen"
+            app:destination="@id/nav_pin" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_otp"
+        android:name="com.bookmygame.ui.login.OTPFragment"
+        android:label=""
+        tools:layout="@layout/fragment_otp">
+
+        <argument
+            android:name="token"
+            app:argType="string"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/navigate_to_admin_home_screen"
+            app:destination="@id/nav_home_admin"
+            app:popUpTo="@id/nav_login"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/navigate_to_ground_owner_home_screen"
+            app:destination="@id/nav_home_ground_owner"
+            app:popUpTo="@id/nav_login"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/navigate_to_user_home_screen"
+            app:destination="@id/nav_home_user"
+            app:popUpTo="@id/nav_login"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pin"
+        android:name="com.bookmygame.ui.login.PINFragment"
+        android:label=""
+        tools:layout="@layout/fragment_pin">
+
+        <argument
+            android:name="token"
+            app:argType="string"
+            app:nullable="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.bookmygame.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_home_admin"
+        android:name="com.bookmygame.ui.admin.AdminHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_admin_user">
+
+        <argument
+            android:name="user_id"
+            app:argType="string"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/navigate_to_login_screen"
+            app:destination="@id/nav_login"
+            app:popUpTo="@id/nav_home_admin"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home_ground_owner"
+        android:name="com.bookmygame.ui.groundOwner.GroundOwnerHomeFragment"
+        android:label="@string/my_grounds"
+        tools:layout="@layout/fragment_home_ground_owner">
+
+<!--        <argument-->
+<!--            android:name="user_id"-->
+<!--            app:argType="string"-->
+<!--            app:nullable="false" />-->
+
+        <action
+            android:id="@+id/navigate_to_ground_detail_screen"
+            app:destination="@id/nav_ground_owner_ground_detail" />
+
+        <action
+            android:id="@+id/navigate_to_slots_screen"
+            app:destination="@id/nav_ground_owner_ground_slots" />
+
+        <action
+            android:id="@+id/navigate_to_login_screen"
+            app:destination="@id/nav_login"
+            app:popUpTo="@id/nav_home_ground_owner"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ground_owner_ground_detail"
+        android:name="com.bookmygame.ui.groundOwner.GroundOwnerGroundDetailFragment"
+        android:label="Ground Details"
+        tools:layout="@layout/fragment_ground_owner_ground_detail">
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_user_ground_detail"
+        android:name="com.bookmygame.ui.user.UserGroundDetailFragment"
+        android:label="Ground Details"
+        tools:layout="@layout/fragment_user_ground_detail">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ground_owner_ground_slots"
+        android:name="com.bookmygame.ui.groundOwner.GroundOwnerSlotFragment"
+        android:label="Add Slots"
+        tools:layout="@layout/fragment_slot">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.bookmygame.ui.groundOwner.GroundOwnerProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_bookings"
+        android:name="com.bookmygame.ui.groundOwner.GroundOwnerBookingsFragment"
+        android:label="Bookings"
+        tools:layout="@layout/fragment_bookings" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.bookmygame.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_home_user"
+        android:name="com.bookmygame.ui.user.UserHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home_user">
+        <action
+            android:id="@+id/navigate_to_user_ground_detail_screen"
+            app:destination="@id/nav_user_ground_detail" />
+        <action
+            android:id="@+id/navigate_to_login_screen"
+            app:destination="@id/nav_login"
+            app:popUpTo="@id/nav_home_user"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_user_profile"
+        android:name="com.bookmygame.ui.user.UserProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_user" />
+
+    <fragment
+        android:id="@+id/nav_user_bookings"
+        android:name="com.bookmygame.ui.user.UserBookingsFragment"
+        android:label="Bookings"
+        tools:layout="@layout/fragment_bookings_user" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.bookmygame.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
